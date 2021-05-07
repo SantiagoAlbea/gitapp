@@ -2,18 +2,31 @@ export function monefy(num) {
     if (!num) return '';
 
     const numStr = String(num);
-    const points = numStr.length / 3;
+
+    const splitNumber = numStr.split(".")
+
+    const points = splitNumber[0].length / 3;
     const result = [];
 
     for (let i = 0; i < points; i++) {
         const s = -3 * (i + 1);
         const e = -3 * i || undefined;
-        const chunk = numStr.slice(s, e);
+        const chunk = splitNumber[0].slice(s, e);
 
         result.push(chunk);
     }
 
-    return result.reverse().join('.');
+    const beforeComma = result.reverse().join('.');
+
+    if (splitNumber[1] === undefined){
+        return beforeComma;
+    }else{
+        if (splitNumber[1].length === 1){
+            return beforeComma.concat(',',splitNumber[1].concat('',0));
+        }else{
+            return beforeComma.concat(',',splitNumber[1].slice(0,2));
+        }
+    }
 }
 
 export function getRandomColor() {
