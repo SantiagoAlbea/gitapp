@@ -29,6 +29,7 @@ describe('Home Test', () => {
     it('Deberia tener clase de titulo', () => {
         cy.visit('/');
         cy.get('p').should('have.class', 'card-header-title');
+        cy.get('[data-testid=titulo]').should('have.class', 'card-header')
 
     });
 });
