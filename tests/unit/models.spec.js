@@ -73,6 +73,23 @@ test('Listar movimientos con resultados', async () => {
     expect(movements.rows.length).toBe(1);
 });
 
+test('Guardar la fecha ingresada', async () => {
+    const movementData = {
+        date: '2021-04-01T03:00:00.000Z',
+        amount: 50000.0,
+        category: 'Sueldo',
+    };
+
+    // Se crea el movimiento
+
+    const movement = await MovementModel.create(movementData);
+
+    // Comparo que fecha ingresada en el movimiento sea igual a la fecha creada
+    
+    expect(Date.parse(movement.date)).toBe(Date.parse(movementData.date));
+});
+
+
 test('Listar movimientos con limite', async () => {
     const firstMovementData = {
         date: '04/01/2021',
