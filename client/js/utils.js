@@ -61,7 +61,6 @@ export function formatDate(date) {
 }
 
 export function friendlyDate(date){
-    //return new Date(date).toLocaleDateString("es-AR")
-    const aux = new Date(date);
-    return aux.getDate() + '/' + (aux.getMonth()+1) + '/' + aux.getFullYear();
+    return new Date(date).toLocaleDateString("es-AR")
+    
 }
