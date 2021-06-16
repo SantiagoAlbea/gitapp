@@ -61,5 +61,5 @@ export function formatDate(date) {
 }
 
 export function friendlyDate(date){
-    return new Date(date).toLocaleDateString("es-419")
+    return new Date(date).toLocaleDateString("es-AR")
 }
