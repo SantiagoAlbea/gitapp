@@ -304,9 +304,6 @@ test('Eliminar un movimiento', async () => {
 // Creamos el movimiento
     const movement = await MovementModel.create(movementData);
 
-// Chequeamos que la categoría sea la correspondiente
-    expect(movement.category).toBe(movementData.category);
-
     const URL = `${baseURL}/movements/${movement.id}`;
     const req = await fetch(URL, {
         method: 'DELETE',
@@ -314,6 +311,11 @@ test('Eliminar un movimiento', async () => {
             'Content-Type': 'application/json',
         },
     });
+// Testeamos que se elimine
+    const URLtest = `${baseURL}/movements`;
+    const reqtest = await fetch(URLtest);
+    const body = await reqtest.json();
 
     expect(req.status).toBe(200);
+    expect(body.movements.length).toBe(0);
 }); 
