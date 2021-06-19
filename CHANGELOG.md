@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2021-06-19
+
+### Added
+
+- Endpoint para eliminar movimientos
+- Signo positivo o negativo para ingresos y egresos respectivamente
+
+### Fixed
+
+- Formato de las fechas transformado a local
+
 ## [1.1.0] - 2021-06-14
 
 ### Added
@@ -43,7 +54,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Home UI with charts and last movements
 -   Incomes UI with last incomes
 
-[unreleased]: https://github.com/SantiagoAlbea/gitapp/compare/v1.1.0...HEAD
+[unreleased]: https://github.com/SantiagoAlbea/gitapp/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/SantiagoAlbea/gitapp/releases/tag/v1.2.0
 [1.1.0]: https://github.com/SantiagoAlbea/gitapp/releases/tag/v1.1.0
 [1.0.1]: https://github.com/SantiagoAlbea/gitapp/releases/tag/v1.0.1
 [1.0.0]: https://github.com/SantiagoAlbea/gitapp/releases/tag/v1.0.0
