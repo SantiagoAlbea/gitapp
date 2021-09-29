@@ -8,7 +8,7 @@ const init = () => {
             MovementModel.create({
                 date: '01/01/2021',
                 amount: 1000.0,
-                category: 'Supermercado',
+                category: 'Verduleria',
             })
         )
         .then(() =>
