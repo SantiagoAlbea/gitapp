@@ -17,6 +17,8 @@ async function getLastMovements() {
     return movementService.getLast();
 }
 
+console.log("Hola");
+
 /**
  * Renderiza los movimientos
  **/
